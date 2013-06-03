@@ -1,0 +1,24 @@
+extends ../registrationLayout
+block registration
+  div.container(ng-controller='LoginCtrl')
+    div.signin
+      form.form-signin(name='login', ng-submit='authenticate(user)')
+        h3.text-center Please Sign In
+        div
+          | Email:
+          input#username.input-block-level(type='email', name='email', placeholder='Email Address', ng-model='user.email', required, tabIndex='1')
+          input#password.input-block-level(type='password', name='password', placeholder='Password', ng-model='user.password', required, ng-pattern='/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/', tabIndex='2')
+          label.checkbox
+            input(type='checkbox', name='rememberMe', ng-model='rememberMe', tabIndex='3')
+            | Remember me
+          button.btn.btn-large.btn-block.btn-primary(ng-disabled='login.$invalid', tabIndex='4') Sign In
+          div
+            a(href='/forgotpassword', tabIndex='5') Forgot password?
+        div.success(ng-show="success")
+          | You are now logged in...
+        div.error(ng-show="error")
+          | {{errorMsg}}
+    div.signup
+      form.form-signup
+        h3.text-center Need an account? Sign up now
+        input.btn.btn-large.btn-block.btn-primary(type='button', value='Get Started', onClick="window.location.href='/register'", tabIndex='6')

@@ -1,0 +1,29 @@
+div.container
+  div.signin
+    form.form-signin(name='registration', ng-submit='add(user)')
+      div
+        | Email:
+        input.input-block-level(type='email', name='uEmail', placeholder='Email Address', ng-model='user.email', required, tabIndex='1')
+        br
+        .error(ng-show='registration.uEmail.$dirty && registration.uEmail.$invalid')
+          | Invalid: 
+          span(ng-show='registration.uEmail.$error.required') Please enter your email.
+          span(ng-show='registration.uEmail.$error.email') This is not a valid email.
+        | Password:
+        input.input-block-level(type='password', name='password', placeholder='Password', ng-model='user.password', ng-pattern='/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/', required, tabIndex='2')
+        span.error(ng-show='registration.password.$error.pattern && registration.password.$dirty')
+          | Minimum 8 characters, must contain one capital letter, one number and one special character.
+        <br> Confirm Password:
+        input.input-block-level(type='password', name='confirm_password', placeholder='Confirm Password', ng-model='user.confirm_password', data-password-verify='user.password', required, tabIndex='3')
+        span.error(ng-show='registration.confirm_password.$error.passwordVerify')
+          | Passwords do not match
+        label.checkbox
+          input(type='checkbox', ng-model='user.agree', name='userAgree', required='required', tabIndex='4')
+          | I agree to the 
+          a(href='/terms') terms of service
+          |  and 
+          a(href='/policy') privacy policy.
+        button.btn.btn-large.btn-block.btn-primary(ng-disabled='registration.$invalid || isUnchanged(user)', tabIndex='5') Register
+      div
+        p Already a member? 
+        a(href='/login') Login here

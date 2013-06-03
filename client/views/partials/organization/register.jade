@@ -1,0 +1,31 @@
+.container(ng-controller='OrganizationCtrl')
+    div.signin
+      form.form-signin(name='organization', ng-submit='add(organization)')
+        h3.text-center Step 3: Add Organization Details
+        div
+          | Name:
+          input.input-block-level(type='text', name='oName', placeholder='Organization Name', ng-model='organization.name', required='required', ng-model-onblur='ng-model-onblur')
+          span(ng-show='organization.oName.$dirty && organization.oName.$error.required') Please enter the Organization.
+          | Description:
+          input.input-block-level(type='text', name='oDescription', placeholder='Organization Description', data-ng-model='organization.description', required='required')
+          span.error(ng-show='organization.oDescription.$dirty && organization.oDescription.$error_required') Please enter a description.
+          | Logo:
+          input.input-block-level(type='file', name='oLogo', placeholder='Logo', ng-model='organization.logo')
+          | Address:
+          input.input-block-level(type='text', name='oAddress1', placeholder='Address 1', ng-model='organization.address1', required='required', ng-model-onblur='ng-model-onblur')
+          input.input-block-level(type='text', name='oAddress2', placeholder='Address 2', ng-model='organization.address2', ng-model-onblur='ng-model-onblur')
+          span(ng-show='organization.oAddress1.$dirty && organization.oAddress1.$error.required') Please enter the Organization address.
+          | State:
+          input.input-block-level(type='text', name='oState', placeholder='State', data-ng-model='organization.state', required='required')
+          span.error(ng-show='organization.oState.$dirty && organization.oState.$error_required') Please enter a state.
+          | Zip:
+          input.input-block-level(type='text', name='oZip', placeholder='Zip Code', data-ng-model='organization.zip', required='required')
+          span.error(ng-show='organization.oZip.$dirty && organization.oZip.$error_required') Please enter a ZIP code.
+          | Phone:
+          input.input-block-level(type='text', name='oPhone', placeholder='Phone Number', data-ng-model='organization.phone1', required='required')
+          span.error(ng-show='organization.oPhone.$dirty && organization.oPhone.$error_required') Please enter a phone number.
+          | Fax:
+          input.input-block-level(type='text', name='oFax', placeholder='Fax Number', data-ng-model='organization.fax1')
+          | Website:
+          input.input-block-level(type='text', name='oWebsite', placeholder='Website URL', data-ng-model='organization.website')
+          button.btn.btn-large.btn-block.btn-primary(ng-disabled='organization.$invalid || isUnchanged(organization)') Complete Registration

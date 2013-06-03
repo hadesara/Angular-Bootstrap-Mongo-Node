@@ -1,0 +1,38 @@
+html(lang='en', ng-app='bamn')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='_client_modules/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/app.css')
+    title Welcome to B-A-M-N seed
+  body
+    div.container
+      div.header
+        //- a(href='/index') <img src="./img/logo.png"/>
+      block content
+      div.footer
+        ul.text-center
+          li.first: a(href='/about')
+            | About
+          li: a(href='/terms')
+            | Terms of Service
+          li: a(href='/policy')
+            | Privacy Policy
+          li: a(href='/support')
+            | Support
+        p.text-center
+            | &copy; 2013
+
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js')
+    //- <script src="client_modules/angular/angular.min.js"></script> 
+    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(src='_client_modules/angular/angular-cookies.min.js')
+    script(src='_client_modules/angular/angular-resource.min.js')
+    script(src='_client_modules/angular/angular-cookies.js')
+    script(src='_client_modules/bootstrap/js/bootstrap.js')
+    script(src='app/app.js')
+    script(src='app/user/userService.js')
+    script(src='app/user/LoginCtrl.js')
+    script(src='app/user/RegisterCtrl.js')
+    script(src='app/filters.js')
+    script(src='app/directives.js')

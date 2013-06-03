@@ -1,0 +1,16 @@
+div.container
+  div.signin
+    form.form-signin(name='registration2', ng-submit='update(user)')
+      h3.text-center Step 2: Personal Details
+      div
+        | First Name:
+        input.input-block-level(type='text', name='firstName', placeholder='First Name', ng-model='user.firstName', required, tabIndex='1')
+        | Last Name:
+        input.input-block-level(type='text', name='lastName', placeholder='Last Name', ng-model='user.lastName', required, tabIndex='2')
+        | Security Questions:
+        input.input-block-level(type='text', name='securityQuestion', placeholder='Security Question', ng-model='user.securityQuestion', required, tabIndex='3')
+        | Security Answer:
+        input.input-block-level(type='text', name='securityAnswer', placeholder='Security Answer', ng-model='user.securityAnswer', required, tabIndex='4')
+        button.btn.btn-large.btn-block.btn-primary(ng-disabled='registration2.$invalid || isUnchanged(user)', tabIndex='5') Continue
+      div.success(ng-show="success")
+        | Changes saved

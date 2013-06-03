@@ -1,0 +1,97 @@
+.hero-unit {
+  float: left;
+  margin: 0 auto;
+}
+
+.signin {
+  margin: auto;
+  float: right;
+}
+
+.signup {
+  float: right;
+  clear: right;
+}
+
+.footer {
+  clear: both;
+}
+
+.form-signin {
+max-width: 300px;
+padding: 19px 29px 29px;
+margin: 0 auto 0px;
+background-color: #fff;
+border: 1px solid #e5e5e5;
+-webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+        border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.form-signin input[type="email"],
+.form-signin input[type="password"],
+.form-signin input[type="text"] {
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
+}
+
+.checkbox
+{
+    display: block;
+    float: left;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.error {
+  color: Red;
+}
+
+.form-signup {
+max-width: 300px;
+padding: 19px 29px 29px;
+margin: 0 auto 20px;
+background-color: #fff;
+border: 1px solid #e5e5e5;
+-webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+        border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.footer ul li {
+ margin-left: 0;
+ padding: 3px 15px;
+ border-left: 1px solid #000;
+ list-style: none;
+ display: inline;
+ }
+
+.footer ul li.first {
+ margin-left: 0;
+ border-left: none;
+ list-style: none;
+ display: inline;
+ }
+
+.success
+{
+  color: green;
+  margin: 10;
+}
+
+.alreadyMember
+{ padding-top: 10px ;}

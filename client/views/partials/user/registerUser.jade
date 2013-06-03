@@ -1,0 +1,11 @@
+extends ../registrationLayout
+block registration
+  div(ng-controller='RegisterCtrl')
+    div(ng-switch='step')
+        div(ng-switch-when='step1')
+          div(ng-include="'partials/user/registerUser1'")
+        div(ng-switch-when='step2')
+          div(ng-include="'partials/user/registerUser2'")
+        div(ng-switch-default="ng-switch-default")
+          div(ng-include="'partials/user/registerUser1'")
+
