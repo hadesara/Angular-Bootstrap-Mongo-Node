@@ -46,7 +46,7 @@ app.configure('production', function(){
 //Sniff HTTP
 app.all('*', function(req, res, next) {
   //Only allow api requests to /api/auth (uncomment after testing)
-  //Client folder is taken care of in configuration in the express.static 
+  //'Client' folder is taken care of  in the express.static configuration
   // if ((!(/^\/api/auth/g.test(req.url)))
   //   res.send(401);
   // else
