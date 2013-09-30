@@ -8,7 +8,6 @@ var userSchema = new Schema
     lastName: String,
     securityQuestion: String,
     securityAnswer: String,
-    //isDoctor: Boolean,
     organizationId: [Schema.Types.ObjectId],
     location: [String],
     role: String,
